@@ -1,17 +1,24 @@
-# Chromatic Overlay — Motion Preview
+# CHROMA
 
-An interactive two-layer painting study for the PACHIN website. One current has two visual readings: a saturated, pixel-edged surface and a quieter silver-blue painting underneath. Move across the scene to uncover the second layer; the reveal follows the pointer, then returns to its own slow drift.
+[Live demo](https://pachin1919.github.io/chromatic-overlay-motion-preview/)
 
-[**Open the live preview**](https://pachin1919.github.io/chromatic-overlay-motion-preview/)
+![Desktop preview](assets/preview.png)
 
-![First-screen preview of the chromatic current](assets/preview.png)
+A complete standalone bilingual visual frontend, expanded from the original demo with Lovable and adapted for static GitHub Pages hosting.
 
-This is a standalone art-direction demo, not the production website. It has no account, backend, tracking, or external asset requests. The page is English-only. It supports pause and the system's reduced-motion preference; on touch screens, drag across the painting to explore the reveal.
+## Pages
 
-To run locally, serve this directory with any static server and open `index.html`. For example, in PowerShell:
+- /
+- /editions
+- /editions/current-one
+- /process
 
-```powershell
-py -m http.server 4332 --bind 127.0.0.1
-```
+## Local development
 
-The two paintings are project-specific visual assets and are not offered for reuse. Barlow Condensed and IBM Plex Sans license texts are included in `assets/`; GSAP's license notice is included in `vendor/gsap.min.js`.
+Run npm.cmd install, then npm.cmd run dev.
+
+## Build
+
+Run npm.cmd run build.
+
+[Deployment notes](docs/GITHUB-PAGES.md). Original artwork remains project-specific and is not licensed for general reuse; font OFL notices are included. Repository history preserves the earlier standalone demo.
