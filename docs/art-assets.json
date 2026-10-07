@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "path": "public/assets/chroma/round2/accordion-proof.jpg",
+      "size": 214387,
+      "sha256": "f49ad261d61bf3a4002be9d95e5f1294cba5017bd7d56cfab324f1b8d04a95de"
+    },
+    {
+      "path": "public/assets/chroma/round2/edition-sheets.jpg",
+      "size": 215102,
+      "sha256": "119bb379e907fb6a649ab45d4b2974da2f3abdfabbbc585150a207720e79cceb"
+    },
+    {
+      "path": "public/assets/chroma/round2/paper-fibre.jpg",
+      "size": 237658,
+      "sha256": "5f824276b0805e3ad45aa78da8dd313a7c31d4c27cf09d3ebe32d5ca6a1cf6ef"
+    },
+    {
+      "path": "public/assets/chroma/round2/silver-crest.png",
+      "size": 862916,
+      "sha256": "898dc7585df1b0a885d4ae48c47d660ee81fc21c24487d4f6efa2e7120f94176"
+    },
+    {
+      "path": "public/assets/chroma/round2/silver-depth.png",
+      "size": 706658,
+      "sha256": "105551196c6a2c92b09060f98025941ff59642592654f2919c4eed96daaf756b"
+    },
+    {
+      "path": "public/assets/chroma/round2/chromatic-grain.png",
+      "size": 591680,
+      "sha256": "f3257412d684f4cde42567469c7a7c5ffd96235c62020da67b28bc9cbb39ae54"
+    }
+  ]
+}

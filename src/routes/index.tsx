@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RevealArtwork } from "@/components/chroma/reveal-artwork";
 import { useLanguage } from "@/components/chroma/language-context";
+import { FoldStudy, SilverContact, MaterialStudy } from "@/components/chroma/print-studies";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -40,21 +41,17 @@ function HomePage() {
       </div>
     </section>
 
-    <section className="image-spread section-pad section-rule">
+    <section className="chroma-plate section-rule">
       <figure className="spread-image spread-image-wide">
-        <img src={asset("/assets/chroma/chromatic-current.png")} alt="Chromatic Current One composition in cyan, violet and coral against midnight blue" />
+        <img src={asset("assets/chroma/chromatic-current.png")} loading="lazy" width={1672} height={941} alt={t.home.spreadBody} />
         <figcaption>{t.home.spreadLabel}</figcaption>
       </figure>
-      <div className="spread-copy"><span>01</span><h2>{t.home.spreadTitle}</h2><p>{t.home.spreadBody}</p></div>
+      <div className="plate-caption section-pad"><h2>{t.home.spreadTitle}</h2><p>{t.home.spreadBody}</p></div>
     </section>
 
-    <section className="image-spread silver-spread section-pad section-rule">
-      <div className="spread-copy"><span>02</span><h2>{t.home.silverTitle}</h2><p>{t.home.silverBody}</p></div>
-      <figure className="spread-image">
-        <img src={asset("/assets/chroma/silver-current.png")} alt="Silver Current One composition showing tonal structure" />
-        <figcaption>{t.home.silverLabel}</figcaption>
-      </figure>
-    </section>
+    <SilverContact />
+    <FoldStudy />
+    <MaterialStudy />
 
     <section className="closing-band section-pad">
       <p>CHROMA / 01</p><h2>{t.home.closing}</h2>

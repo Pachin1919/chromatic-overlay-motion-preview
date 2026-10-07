@@ -201,3 +201,71 @@ img { display: block; max-width: 100%; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Print studies: each chapter owns its composition, not another motion system. */
+.editorial-intro { padding-block: 76px; grid-template-columns: 1fr 4fr; gap: 32px; }
+.editorial-intro h2 { font-size: 6rem; max-width: 16ch; line-height: .94; }
+.lead-copy { margin: 28px 0 20px; font-size: 1.1rem; }
+.chroma-plate figure { margin: 0; }
+.chroma-plate img { width: 100%; height: auto; aspect-ratio: 1672/941; }
+.chroma-plate figcaption { padding: 14px 6%; font-size: .7rem; }
+.plate-caption { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding-block: 32px 44px; }
+.plate-caption h2 { margin: 0; font: 600 2.8rem/.98 var(--font-display); }
+.plate-caption p { margin: 0; max-width: 50ch; line-height: 1.65; }
+.silver-contact { display: grid; grid-template-columns: 1fr 2.2fr; gap: 64px; padding-block: 72px; }
+.silver-contact h2 { margin: 24px 0; font: 600 3.8rem/.98 var(--font-display); }
+.silver-contact header > p:last-child { line-height: 1.7; max-width: 32ch; }
+.contact-images { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; align-items: start; }
+.contact-images figure, .fold-study figure, .material-study figure { margin: 0; }
+.contact-images .contact-full { grid-column: 1 / -1; width: 72%; }
+.contact-images img { width: 100%; height: auto; }
+.contact-images figure:last-child { padding-top: 40px; }
+.contact-images figcaption, .fold-study figcaption, .material-study figcaption { font-size: .7rem; line-height: 1.5; margin-top: 12px; }
+.fold-study { padding-block: 64px; }
+.fold-study > figure { width: 100%; }
+.fold-study > figure img { width: 100%; height: auto; }
+.fold-text { display: grid; grid-template-columns: 1.3fr 1fr; gap: 64px; margin-top: 36px; }
+.fold-text h2 { margin: 0; font: 600 4.5rem/.98 var(--font-display); max-width: 14ch; }
+.fold-text p { margin: 0; max-width: 48ch; line-height: 1.7; }
+.sheet-study { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.sheet-study > figure { max-width: 560px; }
+.sheet-study .fold-text { display: block; margin: 0; }
+.sheet-study .fold-text p { margin-top: 30px; }
+.material-study { background: var(--foreground); color: var(--background); padding-block: 64px; }
+.material-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; margin-top: 30px; align-items: start; }
+.material-macro img { width: 100%; height: auto; }
+.material-text h2 { font: 600 4rem/.98 var(--font-display); margin: 0 0 24px; }
+.material-text p { line-height: 1.7; max-width: 44ch; }
+.material-text figure { width: 48%; margin-top: 28px; }
+.material-text figure img { width: 100%; height: auto; }
+.closing-band { grid-template-columns: auto 1fr auto; gap: 30px; padding-block: 38px; background: var(--background); color: var(--foreground); }
+.closing-band h2 { font-size: 2.8rem; line-height: 1; }
+.closing-band > p { font-size: .7rem; }
+html[lang="zh-Hans"] .editorial-intro h2 { font-size: 4.4rem; line-height: 1.15; }
+html[lang="zh-Hans"] .fold-text h2, html[lang="zh-Hans"] .material-text h2, html[lang="zh-Hans"] .silver-contact h2 { font-size: 3rem; line-height: 1.2; }
+html[lang="zh-Hans"] .page-title h1, html[lang="zh-Hans"] .detail-title h1 { font-size: 7rem; line-height: 1.15; }
+html[lang="zh-Hans"] .process-title h1 { font-size: 6rem; line-height: 1.15; max-width: 12ch; }
+html[lang="zh-Hans"] .edition-note h2, html[lang="zh-Hans"] .format-notes h2 { font-size: 3.5rem; line-height: 1.2; }
+@media (max-width: 720px) {
+  .editorial-intro { padding-block: 44px; gap: 24px; grid-template-columns: 1fr; }
+  .editorial-intro h2 { font-size: 3.8rem; }
+  .lead-copy { font-size: 1rem; margin-top: 24px; }
+  .plate-caption, .silver-contact, .fold-text, .sheet-study, .material-grid { grid-template-columns: 1fr; gap: 28px; }
+  .plate-caption { padding-block: 24px 32px; }
+  .plate-caption h2 { font-size: 2.5rem; }
+  .silver-contact, .fold-study, .material-study { padding-block: 40px; }
+  .silver-contact h2 { font-size: 3rem; margin-block: 18px; }
+  .contact-images { gap: 16px; }
+  .contact-images .contact-full { width: 88%; }
+  .fold-text h2, .material-text h2 { font-size: 3.1rem; }
+  .fold-text { margin-top: 24px; }
+  .sheet-study .fold-text p { margin-top: 20px; }
+  .material-text figure { width: 52%; }
+  .closing-band { grid-template-columns: 1fr; gap: 16px; padding-block: 30px; }
+  .closing-band h2 { font-size: 2.7rem; }
+  html[lang="zh-Hans"] .editorial-intro h2 { font-size: 2.8rem; }
+  html[lang="zh-Hans"] .fold-text h2, html[lang="zh-Hans"] .material-text h2, html[lang="zh-Hans"] .silver-contact h2 { font-size: 2.4rem; }
+  html[lang="zh-Hans"] .page-title h1, html[lang="zh-Hans"] .detail-title h1 { font-size: 4rem; }
+  html[lang="zh-Hans"] .process-title h1 { font-size: 3.3rem; }
+  html[lang="zh-Hans"] .edition-note h2, html[lang="zh-Hans"] .format-notes h2 { font-size: 2.8rem; }
+}

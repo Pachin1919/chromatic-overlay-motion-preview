@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { RevealArtwork } from "@/components/chroma/reveal-artwork";
 import { useLanguage } from "@/components/chroma/language-context";
+import { FoldStudy, MaterialStudy } from "@/components/chroma/print-studies";
 
 export const Route = createFileRoute("/editions/current-one")({
   head: () => ({ meta: [
@@ -27,7 +28,9 @@ function EditionDetail() {
       </div></div>
       <RevealArtwork mode={mode} onModeChange={setMode} />
     </section>
+    <FoldStudy sheets />
     <section className="format-notes section-pad section-rule"><h2>{t.detail.notesTitle}</h2><dl>{t.detail.notes.map(([term, description]) => <div key={term}><dt>{term}</dt><dd>{description}</dd></div>)}</dl></section>
+    <MaterialStudy />
     <section className="credits section-pad section-rule"><p className="section-label">{t.detail.creditsTitle}</p><p>{t.detail.creditsBody}</p></section>
   </div>;
 }

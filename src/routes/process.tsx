@@ -3,6 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/components/chroma/language-context";
+import { FoldStudy, MaterialStudy } from "@/components/chroma/print-studies";
 
 export const Route = createFileRoute("/process")({
   head: () => ({ meta: [
@@ -19,8 +20,10 @@ function ProcessPage() {
   const { t } = useLanguage();
   return <div className="page-shell process-page">
     <header className="process-title section-pad"><p className="eyebrow">{t.process.eyebrow}</p><h1>{t.process.title}</h1><p>{t.process.intro}</p></header>
-    <figure className="process-plate"><div><img src={asset("/assets/chroma/chromatic-current.png")} alt="Chromatic Current One composition" /><span>CHROMATIC</span></div><div><img src={asset("/assets/chroma/silver-current.png")} alt="Silver Current One composition" /><span>SILVER</span></div></figure>
+    <figure className="process-plate"><div><img src={asset("assets/chroma/chromatic-current.png")} loading="lazy" width={1672} height={941} alt={t.editions.chromaticBody} /><span>{t.common.chromatic}</span></div><div><img src={asset("assets/chroma/silver-current.png")} loading="lazy" width={1672} height={941} alt={t.editions.silverBody} /><span>{t.common.silver}</span></div></figure>
     <section className="process-steps section-pad">{t.process.steps.map(([number, title, body]) => <article key={number}><span>{number}</span><h2>{title}</h2><p>{body}</p></article>)}</section>
-    <section className="colophon section-pad section-rule"><p>Colophon</p><div><p>{t.process.colophon}</p><Button asChild variant="editorial"><Link to="/editions/current-one">{t.common.compare}<ArrowUpRight /></Link></Button></div></section>
+    <FoldStudy />
+    <MaterialStudy />
+    <section className="colophon section-pad section-rule"><p>{t.detail.creditsTitle}</p><div><p>{t.process.colophon}</p><Button asChild variant="editorial"><Link to="/editions/current-one">{t.common.compare}<ArrowUpRight /></Link></Button></div></section>
   </div>;
 }
