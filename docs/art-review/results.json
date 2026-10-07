@@ -1,0 +1,651 @@
+{
+  "key": "chroma",
+  "matrix": [
+    {
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": [],
+        "height": 5554,
+        "sections": [
+          {
+            "class": "cover",
+            "top": 0,
+            "height": 900
+          },
+          {
+            "class": "editorial-intro section-pad",
+            "h2": "One composition. Two material readings.",
+            "top": 900,
+            "height": 596
+          },
+          {
+            "class": "chroma-plate section-rule",
+            "h2": "Colour behaves like current.",
+            "top": 1496.421875,
+            "height": 997
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "Tone reveals the structure.",
+            "top": 2493.421875,
+            "height": 923
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "The image leaves the screen.",
+            "top": 3416.484375,
+            "height": 1180
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 4596.1875,
+            "height": 747
+          },
+          {
+            "class": "closing-band section-pad",
+            "h2": "Read the surface twice.",
+            "top": 5343.390625,
+            "height": 121
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": [],
+        "height": 5314,
+        "sections": [
+          {
+            "class": "cover",
+            "top": 0,
+            "height": 900
+          },
+          {
+            "class": "editorial-intro section-pad",
+            "h2": "一个构图，两种材质读法。",
+            "top": 900,
+            "height": 458
+          },
+          {
+            "class": "chroma-plate section-rule",
+            "h2": "色彩如水流般运动。",
+            "top": 1357.71875,
+            "height": 997
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "明暗显露结构。",
+            "top": 2354.71875,
+            "height": 923
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "图像，走出屏幕。",
+            "top": 3277.78125,
+            "height": 1154
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 4431.578125,
+            "height": 672
+          },
+          {
+            "class": "closing-band section-pad",
+            "h2": "把表面读两遍。",
+            "top": 5103.078125,
+            "height": 121
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "route": "editions/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": [],
+        "height": 4117,
+        "sections": [
+          {
+            "class": "edition-pair section-pad section-rule",
+            "top": 700.09375,
+            "height": 867
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "Tone reveals the structure.",
+            "top": 1567.109375,
+            "height": 923
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "The image leaves the screen.",
+            "top": 2490.171875,
+            "height": 853
+          },
+          {
+            "class": "edition-note section-pad section-rule",
+            "h2": "The pair is the work.",
+            "top": 3343.140625,
+            "height": 684
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0,
+        "broken": [],
+        "height": 4088,
+        "sections": [
+          {
+            "class": "edition-pair section-pad section-rule",
+            "top": 651.78125,
+            "height": 867
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "明暗显露结构。",
+            "top": 1518.796875,
+            "height": 923
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "图像，走出屏幕。",
+            "top": 2441.859375,
+            "height": 853
+          },
+          {
+            "class": "edition-note section-pad section-rule",
+            "h2": "两幅合在一起，才是作品。",
+            "top": 3294.828125,
+            "height": 703
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "route": "editions/current-one/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": [],
+        "height": 4396,
+        "sections": [
+          {
+            "class": "detail-viewer section-pad section-rule",
+            "top": 761.09375,
+            "height": 1046
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "The image leaves the screen.",
+            "top": 1807.25,
+            "height": 853
+          },
+          {
+            "class": "format-notes section-pad section-rule",
+            "h2": "Paper-format design notes",
+            "top": 2660.21875,
+            "height": 656
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 3316.375,
+            "height": 747
+          },
+          {
+            "class": "credits section-pad section-rule",
+            "top": 4063.578125,
+            "height": 243
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0,
+        "broken": [],
+        "height": 4168,
+        "sections": [
+          {
+            "class": "detail-viewer section-pad section-rule",
+            "top": 712.78125,
+            "height": 1046
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "图像，走出屏幕。",
+            "top": 1758.9375,
+            "height": 853
+          },
+          {
+            "class": "format-notes section-pad section-rule",
+            "h2": "纸张与版式设计说明",
+            "top": 2611.90625,
+            "height": 579
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 3191.28125,
+            "height": 672
+          },
+          {
+            "class": "credits section-pad section-rule",
+            "top": 3862.78125,
+            "height": 215
+          }
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "route": "process/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "How one image becomes two readings.",
+        "overflow": 0,
+        "broken": [],
+        "height": 5067,
+        "sections": [
+          {
+            "class": "process-steps section-pad",
+            "h2": "Composition",
+            "top": 1672.09375,
+            "height": 888
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "The image leaves the screen.",
+            "top": 2559.96875,
+            "height": 1180
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 3739.671875,
+            "height": 747
+          },
+          {
+            "class": "colophon section-pad section-rule",
+            "top": 4486.875,
+            "height": 491
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "一张图，如何形成两种读法。",
+        "overflow": 0,
+        "broken": [],
+        "height": 4515,
+        "sections": [
+          {
+            "class": "process-steps section-pad",
+            "h2": "构图",
+            "top": 1320.8125,
+            "height": 816
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "图像，走出屏幕。",
+            "top": 2136.734375,
+            "height": 1154
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 3290.53125,
+            "height": 672
+          },
+          {
+            "class": "colophon section-pad section-rule",
+            "top": 3962.03125,
+            "height": 463
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "route": "",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": [],
+        "height": 4626,
+        "sections": [
+          {
+            "class": "cover",
+            "top": 0,
+            "height": 844
+          },
+          {
+            "class": "editorial-intro section-pad",
+            "h2": "One composition. Two material readings.",
+            "top": 844,
+            "height": 573
+          },
+          {
+            "class": "chroma-plate section-rule",
+            "h2": "Colour behaves like current.",
+            "top": 1417.296875,
+            "height": 519
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "Tone reveals the structure.",
+            "top": 1936.125,
+            "height": 796
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "The image leaves the screen.",
+            "top": 2731.984375,
+            "height": 597
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 3328.53125,
+            "height": 894
+          },
+          {
+            "class": "closing-band section-pad",
+            "h2": "Read the surface twice.",
+            "top": 4222.9375,
+            "height": 231
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": [],
+        "height": 4130,
+        "sections": [
+          {
+            "class": "cover",
+            "top": 0,
+            "height": 844
+          },
+          {
+            "class": "editorial-intro section-pad",
+            "h2": "一个构图，两种材质读法。",
+            "top": 844,
+            "height": 393
+          },
+          {
+            "class": "chroma-plate section-rule",
+            "h2": "色彩如水流般运动。",
+            "top": 1237.390625,
+            "height": 492
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "明暗显露结构。",
+            "top": 1729.828125,
+            "height": 704
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "图像，走出屏幕。",
+            "top": 2433.71875,
+            "height": 537
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 2970.859375,
+            "height": 799
+          },
+          {
+            "class": "closing-band section-pad",
+            "h2": "把表面读两遍。",
+            "top": 3770.171875,
+            "height": 188
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "route": "editions/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": [],
+        "height": 3765,
+        "sections": [
+          {
+            "class": "edition-pair section-pad section-rule",
+            "top": 558.453125,
+            "height": 909
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "Tone reveals the structure.",
+            "top": 1467.109375,
+            "height": 796
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "The image leaves the screen.",
+            "top": 2262.96875,
+            "height": 790
+          },
+          {
+            "class": "edition-note section-pad section-rule",
+            "h2": "The pair is the work.",
+            "top": 3052.765625,
+            "height": 541
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0,
+        "broken": [],
+        "height": 3447,
+        "sections": [
+          {
+            "class": "edition-pair section-pad section-rule",
+            "top": 440.171875,
+            "height": 854
+          },
+          {
+            "class": "silver-contact section-pad section-rule",
+            "h2": "明暗显露结构。",
+            "top": 1294.453125,
+            "height": 704
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "图像，走出屏幕。",
+            "top": 1998.34375,
+            "height": 730
+          },
+          {
+            "class": "edition-note section-pad section-rule",
+            "h2": "两幅合在一起，才是作品。",
+            "top": 2728.734375,
+            "height": 547
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "route": "editions/current-one/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": [],
+        "height": 4438,
+        "sections": [
+          {
+            "class": "detail-viewer section-pad section-rule",
+            "top": 652.453125,
+            "height": 752
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "The image leaves the screen.",
+            "top": 1404.046875,
+            "height": 790
+          },
+          {
+            "class": "format-notes section-pad section-rule",
+            "h2": "Paper-format design notes",
+            "top": 2193.84375,
+            "height": 841
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 3035.15625,
+            "height": 894
+          },
+          {
+            "class": "credits section-pad section-rule",
+            "top": 3929.5625,
+            "height": 337
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0,
+        "broken": [],
+        "height": 4030,
+        "sections": [
+          {
+            "class": "detail-viewer section-pad section-rule",
+            "top": 507.78125,
+            "height": 726
+          },
+          {
+            "class": "fold-study section-pad section-rule sheet-study",
+            "h2": "图像，走出屏幕。",
+            "top": 1233.78125,
+            "height": 730
+          },
+          {
+            "class": "format-notes section-pad section-rule",
+            "h2": "纸张与版式设计说明",
+            "top": 1964.171875,
+            "height": 786
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 2749.828125,
+            "height": 799
+          },
+          {
+            "class": "credits section-pad section-rule",
+            "top": 3549.140625,
+            "height": 309
+          }
+        ]
+      }
+    },
+    {
+      "width": 390,
+      "route": "process/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "h1": "How one image becomes two readings.",
+        "overflow": 0,
+        "broken": [],
+        "height": 4593,
+        "sections": [
+          {
+            "class": "process-steps section-pad",
+            "h2": "Composition",
+            "top": 1254.984375,
+            "height": 1274
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "The image leaves the screen.",
+            "top": 2529.109375,
+            "height": 597
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "At the edge of the image.",
+            "top": 3125.65625,
+            "height": 894
+          },
+          {
+            "class": "colophon section-pad section-rule",
+            "top": 4020.0625,
+            "height": 402
+          }
+        ]
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "一张图，如何形成两种读法。",
+        "overflow": 0,
+        "broken": [],
+        "height": 4003,
+        "sections": [
+          {
+            "class": "process-steps section-pad",
+            "h2": "构图",
+            "top": 1090.9375,
+            "height": 1057
+          },
+          {
+            "class": "fold-study section-pad section-rule ",
+            "h2": "图像，走出屏幕。",
+            "top": 2147.5625,
+            "height": 537
+          },
+          {
+            "class": "material-study section-pad",
+            "h2": "在图像的边缘。",
+            "top": 2684.703125,
+            "height": 799
+          },
+          {
+            "class": "colophon section-pad section-rule",
+            "top": 3484.015625,
+            "height": 347
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "bad": []
+}
