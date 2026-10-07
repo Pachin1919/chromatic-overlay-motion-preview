@@ -1,0 +1,146 @@
+{
+  "key": "chroma",
+  "matrix": [
+    {
+      "width": 1440,
+      "route": "",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "CHROMA — Art Editions",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "CHROMA",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "route": "editions/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Current One — CHROMA Editions",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "route": "editions/current-one/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Current One — Edition Detail | CHROMA",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 1440,
+      "route": "process/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Process — CHROMA Art Editions",
+        "h1": "How one image becomes two readings.",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "一张图，如何形成两种读法。",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "route": "",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "CHROMA — Art Editions",
+        "h1": "CHROMA",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "CHROMA",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "route": "editions/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Current One — CHROMA Editions",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "route": "editions/current-one/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Current One — Edition Detail | CHROMA",
+        "h1": "Current One",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "流动之一",
+        "overflow": 0
+      }
+    },
+    {
+      "width": 390,
+      "route": "process/",
+      "status": 200,
+      "en": {
+        "lang": "en",
+        "title": "Process — CHROMA Art Editions",
+        "h1": "How one image becomes two readings.",
+        "overflow": 0,
+        "broken": []
+      },
+      "zh": {
+        "lang": "zh-Hans",
+        "h1": "一张图，如何形成两种读法。",
+        "overflow": 0
+      }
+    }
+  ],
+  "interaction": {
+    "silver": "true"
+  },
+  "errors": [],
+  "bad": []
+}
