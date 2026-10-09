@@ -1,6 +1,6 @@
 # GitHub Pages delivery
 
-Source Lovable revision: f2aff7558814b6930a1663bb0e2aa1262b2b58fc.
+Source snapshot: f2aff7558814b6930a1663bb0e2aa1262b2b58fc.
 
 The reviewed React/TanStack route content and interactions are retained. Hosting is adapted to a static Vite browser app; the server wrapper and platform error-reporting transport are excluded. Repository base path is /chromatic-overlay-motion-preview/. Every known detail route gets a physical index.html for direct entry and refresh.
 

@@ -23,6 +23,8 @@ export function RevealArtwork({
   const chromaticRef = useRef<HTMLImageElement>(null);
   const rafRef = useRef<number | null>(null);
   const pointerRef = useRef({ x: 0.66, y: 0.46, active: false });
+  const renderedRef = useRef({ x: 0.66, y: 0.46 });
+  const requestPaintRef = useRef<(() => void) | null>(null);
   const visibleRef = useRef(true);
   const [localMode, setLocalMode] = useState<Mode>("compare");
   const [paused, setPaused] = useState(false);
@@ -39,38 +41,56 @@ export function RevealArtwork({
     const layer = chromaticRef.current;
     if (!frame || !layer || mode !== "compare") return;
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const applyMedia = () => setReduced(media.matches);
-    applyMedia();
-    media.addEventListener("change", applyMedia);
-
-    const observer = new IntersectionObserver(([entry]) => {
-      visibleRef.current = Boolean(entry?.isIntersecting);
-      if (visibleRef.current && rafRef.current === null) rafRef.current = requestAnimationFrame(paint);
-    }, { threshold: 0.05 });
-    observer.observe(frame);
-
+    let lastPaint = 0;
     const paint = (now: number) => {
       rafRef.current = null;
       if (!visibleRef.current || document.visibilityState === "hidden") return;
       const pointer = pointerRef.current;
       const x = pointer.active || paused || media.matches ? pointer.x : 0.66 + Math.sin(now * 0.00018) * 0.055;
       const y = pointer.active || paused || media.matches ? pointer.y : 0.46 + Math.cos(now * 0.00014) * 0.06;
-      layer.style.setProperty("--reveal-x", `${x * 100}%`);
-      layer.style.setProperty("--reveal-y", `${y * 100}%`);
-      if (!paused && !media.matches) rafRef.current = requestAnimationFrame(paint);
+      const dt = lastPaint ? Math.min(50, now - lastPaint) : 16;
+      lastPaint = now;
+      const follow = media.matches || paused ? 1 : 1 - Math.exp(-dt / 85);
+      const rendered = renderedRef.current;
+      rendered.x += (x - rendered.x) * follow;
+      rendered.y += (y - rendered.y) * follow;
+      layer.style.setProperty("--reveal-x", `${rendered.x * 100}%`);
+      layer.style.setProperty("--reveal-y", `${rendered.y * 100}%`);
+      const unsettled = Math.abs(rendered.x - x) + Math.abs(rendered.y - y) > 0.0001;
+      if (!paused && !media.matches && (!pointer.active || unsettled)) rafRef.current = requestAnimationFrame(paint);
     };
-
-    const resumeWhenVisible = () => {
-      if (document.visibilityState === "visible" && visibleRef.current && rafRef.current === null) {
+    const schedule = () => {
+      if (document.visibilityState === "visible" && visibleRef.current && rafRef.current === null && !paused) {
+        lastPaint = 0;
         rafRef.current = requestAnimationFrame(paint);
       }
     };
+    requestPaintRef.current = schedule;
+    const applyMedia = () => {
+      setReduced(media.matches);
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+      schedule();
+    };
+    applyMedia();
+    media.addEventListener("change", applyMedia);
+    const observer = new IntersectionObserver(([entry]) => {
+      visibleRef.current = Boolean(entry?.isIntersecting);
+      if (visibleRef.current) schedule();
+    }, { threshold: 0.05 });
+    observer.observe(frame);
+    const resumeWhenVisible = () => {
+      if (document.visibilityState === "hidden" && rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      } else schedule();
+    };
     document.addEventListener("visibilitychange", resumeWhenVisible);
-    rafRef.current = requestAnimationFrame(paint);
 
     return () => {
       if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
+      requestPaintRef.current = null;
       observer.disconnect();
       media.removeEventListener("change", applyMedia);
       document.removeEventListener("visibilitychange", resumeWhenVisible);
@@ -86,9 +106,7 @@ export function RevealArtwork({
       y: Math.min(1, Math.max(0, (clientY - rect.top) / rect.height)),
       active: true,
     };
-    const layer = chromaticRef.current;
-    layer?.style.setProperty("--reveal-x", `${pointerRef.current.x * 100}%`);
-    layer?.style.setProperty("--reveal-y", `${pointerRef.current.y * 100}%`);
+    requestPaintRef.current?.();
   };
 
   return (
@@ -101,11 +119,19 @@ export function RevealArtwork({
         tabIndex={0}
         onPointerMove={(event) => updatePointer(event.clientX, event.clientY)}
         onPointerDown={(event) => {
+          if (mode !== "compare" || paused) return;
           event.currentTarget.setPointerCapture(event.pointerId);
+          chromaticRef.current?.style.setProperty("--reveal-scale", "1.35");
           updatePointer(event.clientX, event.clientY);
         }}
-        onPointerLeave={() => { pointerRef.current.active = false; }}
+        onPointerUp={() => chromaticRef.current?.style.removeProperty("--reveal-scale")}
+        onLostPointerCapture={() => chromaticRef.current?.style.removeProperty("--reveal-scale")}
+        onPointerLeave={() => {
+          pointerRef.current.active = false;
+          requestPaintRef.current?.();
+        }}
         onKeyDown={(event) => {
+          if (mode !== "compare" || paused) return;
           const step = event.shiftKey ? 0.1 : 0.035;
           if (event.key === "ArrowLeft") pointerRef.current.x -= step;
           else if (event.key === "ArrowRight") pointerRef.current.x += step;
@@ -116,8 +142,7 @@ export function RevealArtwork({
           pointerRef.current.x = Math.min(1, Math.max(0, pointerRef.current.x));
           pointerRef.current.y = Math.min(1, Math.max(0, pointerRef.current.y));
           pointerRef.current.active = true;
-          chromaticRef.current?.style.setProperty("--reveal-x", `${pointerRef.current.x * 100}%`);
-          chromaticRef.current?.style.setProperty("--reveal-y", `${pointerRef.current.y * 100}%`);
+          requestPaintRef.current?.();
         }}
       >
         <img className="silver-layer" src={asset("/assets/chroma/silver-current.png")} alt="" draggable={false} />

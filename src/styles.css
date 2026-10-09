@@ -85,7 +85,7 @@ img { display: block; max-width: 100%; }
 .reveal-shell { position: relative; overflow: hidden; }
 .reveal-artwork { position: relative; isolation: isolate; overflow: hidden; min-height: 320px; background: var(--artwork-background); touch-action: pan-y; cursor: crosshair; }
 .reveal-artwork img, .reveal-shade { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; user-select: none; }
-.chromatic-layer { --reveal-x: 66%; --reveal-y: 46%; --reveal-radius: clamp(120px, 13vw, 190px); -webkit-mask-image: radial-gradient(circle var(--reveal-radius) at var(--reveal-x) var(--reveal-y), transparent 0%, oklch(0 0 0 / .22) 50%, oklch(0 0 0) 100%); mask-image: radial-gradient(circle var(--reveal-radius) at var(--reveal-x) var(--reveal-y), transparent 0%, oklch(0 0 0 / .22) 50%, oklch(0 0 0) 100%); }
+.chromatic-layer { --reveal-x: 66%; --reveal-y: 46%; --reveal-scale: 1; --reveal-radius: calc(clamp(120px, 13vw, 190px) * var(--reveal-scale)); -webkit-mask-image: radial-gradient(circle var(--reveal-radius) at var(--reveal-x) var(--reveal-y), transparent 0%, oklch(0 0 0 / .22) 50%, oklch(0 0 0) 100%); mask-image: radial-gradient(circle var(--reveal-radius) at var(--reveal-x) var(--reveal-y), transparent 0%, oklch(0 0 0 / .22) 50%, oklch(0 0 0) 100%); }
 .mode-chromatic .silver-layer { visibility: hidden; }
 .mode-chromatic .chromatic-layer { mask-image: none; -webkit-mask-image: none; }
 .mode-silver .chromatic-layer { visibility: hidden; }
@@ -97,6 +97,7 @@ img { display: block; max-width: 100%; }
 .cover-subtitle { margin: 30px 0 0; font-size: clamp(1rem,1.5vw,1.3rem); }
 .cover-instruction { position: absolute; z-index: 4; left: clamp(24px,4vw,64px); bottom: clamp(24px,3vw,42px); width: 31ch; margin: 0; font-size: .72rem; line-height: 1.5; }
 .cover-arrow { position: absolute; z-index: 4; right: 50%; bottom: 30px; width: 26px; height: 26px; }
+.cover-copy, .cover-instruction, .cover-arrow { pointer-events: none; }
 
 .section-pad { padding-inline: clamp(20px,6vw,92px); }
 .section-rule { border-top: 1px solid var(--border); }
